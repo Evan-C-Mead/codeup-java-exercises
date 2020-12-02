@@ -169,7 +169,15 @@ public class SyntaxLecture {
 //
 //                System.out.println(num4);
 
-
+//        // this will overflow - improper use of explicit casting
+//        int num = 3000;
+//        byte num2 = (byte) num;
+//        System.out.println(num2);
+//
+//        // this will run appropriately - proper use of explicit casting
+//        double pi = 3.14159;
+//        int almostPi = (int) pi;
+//        System.out.println(almostPi);
 
     }
 
