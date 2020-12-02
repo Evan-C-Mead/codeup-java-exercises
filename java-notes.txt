@@ -69,4 +69,4 @@ What are some differences between char and String types?
 - Char is primitive datatype where as String is a class. A char holds a single character, while a String holds lots of characters.
 
 What happens if you store a number in a variable greater than the data type’s constraints?
--
+- It wont compile and the solution wont run.
