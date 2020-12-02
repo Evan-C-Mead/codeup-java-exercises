@@ -1,0 +1,72 @@
+What is the difference between a .java and .class file?
+- When writing Java code, you should have one class in each .java source file, and the name of the class should be the same as the name of the file.
+In this example, our class is named Main, so we would have this source code in a file named Main.java.
+
+Why are we using an IDE (IntelliJ) instead of a simple text editor for writing Java code?
+- IDEs are the de-facto standard for writing Java code. This is primarily due to the automation of the compile-run process, and rich autocompletion and code analysis tools.
+
+What is the difference between a JRE and a JDK?
+- Most end users will only have a JRE. As developers, we'll want to have the JDK in order to have access to all the developer tools we'll need. In short:
+the JRE is necessary to run Java applications
+the JDK is necessary to create and build Java applications
+
+Are we currently learning about JavaSE, JavaEE, JavaME, or JavaFX?
+- We will use Java SE and EE in this course.
+
+What are some key differences between JavaScript and Java?
+- Java syntax is very similar JavaScript, however, most of the similarities end there. The major differences between the two include:
+Java is compiled while JavaScript is interpreted.
+Java is statically typed while JavaScript has dynamic typing.
+While JavaScript does have objects, there is much more focus on them in Java, and the way they are defined and used is quite different.
+JavaScript runs (mostly) in the browser, while Java runs almost everywhere.
+
+Describe in some detail the process by which a Java program is able to run on an operating system.
+- Java source code is written in a .java file.
+This is plain-text, human-readable code.
+The source code is compiled.
+Next the .java file is compiled with the javac tool.
+While it is good to know about javac, practically speaking, you won't interact with it much directly. Rather, an IDE (like IntelliJ) or a build tool (like maven) will automate it's usage for you.
+The output of this step is a file with an extension of class. This file contains JVM Bytecode. This is a lower-level language that maps closely to specific instructions that a computer's processor executes.
+During this step, you will encounter compile-time errors (as opposed to run-time errors). These are errors will prevent the compiler from making sense of your source code. An example of a compile-time error is a syntax error.
+The compiled bytecode runs on the JVM.
+The JVM now interprets the bytecode, turning it into machine code (code that is read directly by a computer's processor). Machine code is different for every different type of computer processor. This means that the implementation of the JVM varies from environment to environment, but the bytecode that is run by the JVM is the same no matter what type of computer is running it.
+In this stage you will encounter run-time errors, as well as see the actual output of your program. Here we would use the java command line command to execute class files, but much like the compilation step, it is fairly rare to interact with the java command directly; rather, your IDE or build tool will both compile and run the code in one step.
+
+Why is Java touted as a “write once, run anywhere” language?
+- Java applications are called WORA (Write Once Run Anywhere). This means a programmer can develop Java code on one system and can expect it to run on any other Java-enabled system without any adjustment. This is all possible because of JVM (Java Virtual Machine). VM is a part of the JRE (Java Runtime Environment).
+
+What is the difference between compiled and interpreted languages? Static and dynamic? Which is Java, which is JavaScript?
+-
+
+What does a compiler do?
+- It translates source code from a high-level programming language to a lower level language (e.g., assembly language, object code, or machine code) to create an executable program.
+
+What is a virtual machine?
+- A virtual machine is a computer file, typically called an image, that behaves like an actual computer. In other words, creating a computer within a computer. It runs in a window, much like any other program, giving the end user the same experience on a virtual machine as they would have on the host operating system itself. The virtual machine is "sandboxed" from the rest of the system, meaning that the software inside a virtual machine can’t escape or tamper with the computer itself. This produces an ideal environment for testing other operating systems including beta releases, accessing virus-infected data, creating operating system backups, and running software or applications on operating systems they weren’t originally intended for.
+
+What is the difference between bytecode and source code files?
+- The difference between source code and bytecode is that the source code is a collection of computer instructions written using a human-readable programming language while the bytecode is the intermediate code between source code and machine code that is executed by a virtual machine.
+
+Do you need the JDK or the JRE to play minecraft?
+- You would need the JRE(Java Runtime Environment).
+
+Why would you use an IDE as opposed to a simple text editor when writing Java code?
+- Primarily due to the automation of the compile-run process, and rich autocompletion and code analysis tools.
+
+What is the purpose of the out directory?
+- It contains the output of your project when you build/compile. It contains .class files.
+
+Why does Java have multiple number data types? Why use one over the other?
+- For precision.
+
+Is a string a primitive type in Java?
+- No, it is not.
+
+What is the difference between explicit and implicit casting? What are specific examples?
+- Implicit casting is assigning a less precise data type to a more precise data type. Explicit casting is the reverse. Implicit casting 3 to get the actual/rounded number of Pi. Explicit casting would be the opposite, taking Pi and rounding it to 3.
+
+What are some differences between char and String types?
+- Char is primitive datatype where as String is a class. A char holds a single character, while a String holds lots of characters.
+
+What happens if you store a number in a variable greater than the data type’s constraints?
+-
