@@ -29,6 +29,13 @@ public class HelloWorld {
 
 //        String class = "hello"; <-- does not work due to "class" being reserved in Java
 
+        // this will create ClassCastExceptions, but will crash the solution due to improper casting of data types
+//        String theNumberThree = "three";
+//        Object o = theNumberThree;
+//        int three = (int) o;
+//        int three = (int) "three";
+//        System.out.println(three);
+
         // rewrite the following expressions using the relevant shorthand assignment operators
 //        int x = 4;
 //        x = x + 5;
