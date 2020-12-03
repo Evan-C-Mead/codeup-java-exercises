@@ -1,5 +1,7 @@
 import java.util.Scanner;
 
+import static java.lang.Integer.parseInt;
+
 public class ConsoleExercises {
     public static void main(String[] args) {
 
@@ -31,8 +33,8 @@ public class ConsoleExercises {
 
 
 //        System.out.println("Enter the length and width: ");
-//        int width = userInput.nextInt();
-//        int height = userInput.nextInt();
+//        int width = parseInt(userInput.nextLine());
+//        int height = parseInt(userInput.nextLine());
 //        System.out.println("Area is: " + width * height);
 //        System.out.println("Perimeter is: " + (width * 2) + (height * 2));
 
