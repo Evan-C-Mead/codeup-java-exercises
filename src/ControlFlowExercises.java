@@ -33,17 +33,42 @@ public class ControlFlowExercises {
 //            System.out.println("Program terminated...");
 //        }
 
-        for (double i = 1; i <= 100; i +=1) {
-            if (i % 15 == 0) {
-                System.out.printf("FizzBuzz %.0f\n", i);
-            } else if (i % 5 == 0) {
-                System.out.printf("Buzz %.0f\n", i);
-            } else if (i % 3 == 0) {
-                System.out.printf("Fizz %.0f\n", i);
-            } else {
-                System.out.printf("%.0f\n", i);
+//        for (double i = 1; i <= 100; i +=1) {
+//            if (i % 15 == 0) {
+//                System.out.printf("FizzBuzz %.0f\n", i);
+//            } else if (i % 5 == 0) {
+//                System.out.printf("Buzz %.0f\n", i);
+//            } else if (i % 3 == 0) {
+//                System.out.printf("Fizz %.0f\n", i);
+//            } else {
+//                System.out.printf("%.0f\n", i);
+//            }
+//        }
+
+        boolean userContinues = true;
+
+        do {
+            System.out.print("What number would you like to go up to? ");
+            int userInt = userInput.nextInt();
+            System.out.println();
+            System.out.println("Here is your table!");
+            System.out.println();
+            System.out.println("number | squared | cubed");
+            System.out.println("------ | ------- | -----");
+            for (long i = 1; i <= userInt; i += 1) {
+                System.out.format("%-7d", i);
+                System.out.print("|");
+                System.out.format(" %-8d", i * i);
+                System.out.print("|");
+                System.out.format(" %-9d", i * i * i);
+                System.out.println();
             }
-        }
+            System.out.print("Would you like to enter another number (y/n)? ");
+            String userResponse = userInput.next();
+            if (!userResponse.equalsIgnoreCase("y")) {
+                userContinues = false;
+            }
+        } while (userContinues);
 
     }
 }
