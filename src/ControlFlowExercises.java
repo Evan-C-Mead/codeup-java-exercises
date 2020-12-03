@@ -7,24 +7,30 @@ public class ControlFlowExercises {
         Scanner userInput = new Scanner(System.in);
         userInput.useDelimiter("\n");
 
+        System.out.println("What is your class percentage grade?");
+        double grade = userInput.nextDouble();
+        System.out.println("Would you like to continue [Y/N]");
 
-        System.out.println("Enter a number. You will see a table of squared and cubed numbers up to the number you have entered.");
-        double input = userInput.nextDouble();
+        String userGrade = userInput.next();
+        boolean confirmation = userGrade.equalsIgnoreCase("y");
 
-        System.out.println("Would you like to continue? [Y/N]");
-        String userConfirmation = userInput.next();
-        boolean confirm = userConfirmation.equalsIgnoreCase("Y");
+        if (confirmation) {
+            if (grade <= 100 & grade >= 88){
+                System.out.println("You received an A :)");
 
-        if (confirm) {
-            System.out.println("Number | Squared | Cubed");
-            System.out.println("------ | ------- | -----");
-            for (double i = 1; i <= input; i++ ){
-                double squared = Math.pow(i, 2);
-                double cubed = Math.pow(i, 3);
-                System.out.printf("%.0f      | %.0f       | %.0f\n", i, squared, cubed);
+            }else if (grade <= 87 & grade >= 80){
+                System.out.println("You received a B :}");
+            }else if (grade <= 79 & grade >= 67){
+                System.out.println("You received a C :|");
+            }else if (grade <= 66 & grade >= 60){
+                System.out.println("You received a D :{");
+            }else if (grade <= 59 & grade >= 0){
+                System.out.println("You received a F :[");
+            }else {
+                System.out.println("Try again...");
             }
-        } else {
-            System.out.println("Program terminated");
+        }else {
+            System.out.println("Program terminated...");
         }
 
     }
