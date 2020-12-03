@@ -14,8 +14,8 @@ public class ConsoleExercises {
 //        System.out.println("Please enter your favorite number: ");
 //        int number = userInput.nextInt();
 //        System.out.println(number);
-//
-//
+
+
 //        System.out.println("Please enter three fruits: ");
 //        String firstFruit = userInput.next();
 //        String secondFruit = userInput.next();
@@ -23,10 +23,10 @@ public class ConsoleExercises {
 //        System.out.println(firstFruit);
 //        System.out.println(secondFruit);
 //        System.out.println(thirdFruit);
-//
-//
+
+
 //        System.out.println("Type a sentence: ");
-//        String sentence = userInput.next();
+//        String sentence = userInput.nextLine();
 //        System.out.println(sentence);
 
 
