@@ -1,0 +1,29 @@
+What is a Java method?
+- Methods are a sequence of statements that perform a specific task. They are analogous to functions in JavaScript, and like JavaScript functions, they commonly accept input, and produce output.
+
+Why use additional methods rather than writing all Java code in a main method?
+-
+
+What does it mean to ‘call’ or ‘invoke’ a method?
+- It means to "execute" or run that method.
+
+What are six parts of a method definition as explained in the curriculum?
+- Visibility Modifier (public/private/protected), static/instance, return type, method name, parameters, an exception list, and the body (where everything is encompassed by curly braces { --- }).
+
+In what ways do Java methods differ from JS functions?
+- Methods are tied in Java to a class or object vs. lone function in JS. Default values require multiple methods vs. syntax in single function. Parameter data type is fixed vs. flexible in JS. Method calls have to relate to a main method.
+
+What is a method signature?
+- In the Java programming language, a method signature is the method name and the number, type and order of its parameters. Return types and thrown exceptions are not considered to be a part of the method signature.
+
+What is method overloading?
+- Method overloading is defining multiple methods with the same name, but with different parameter type, parameter order, or number of parameters. Overloaded methods can call other versions of themselves, and are commonly used to provide default values for arguments.
+
+Will changing the return type of a method overload it?
+- No, you cannot overload a method based on different return type but same argument type and number in Java.
+
+What is recursion and what are the differences/pros/cons compared to iteration?
+- Recursion is a concept that aims to solve a problem by dividing it into smaller chunks. The core idea of recursion is creating a method that calls itself, but with different parameters than were originally passed. Whenever you are writing a recursive method, you must make sure to have a base case or stop condition so that the method does not call itself over and over again indefinitely.
+
+What is a StackOverflowError?
+- A StackOverflowError is a runtime error in Java. It is thrown when the amount of call stack memory allocated by JVM is exceeded. A common case of a StackOverflowError being thrown, is when call stack exceeds due to excessive deep or infinite recursion.
