@@ -2,6 +2,12 @@ public class StringLecture {
 
     public static void main(String[] args) {
 
+        //Important String lesson concepts:
+        //  Strings are NOT a primitive type. They are a reference type.
+        //  Strings are immutable in Java; string manipulations will not alter original.
+        //  String values should NOT be compared using ‘==’.
+
+
 // ------ .equals(String anotherString)
 
 //        String one = "2";
@@ -20,6 +26,7 @@ public class StringLecture {
 //        String title = "Dr. Doctor";
 //        boolean isADoctor = title.toLowerCase().startsWith("dr");
 //        System.out.println(isADoctor);
+//        System.out.println(title);
 
 
 // ------ .endsWith(String suffix)
@@ -108,16 +115,14 @@ public class StringLecture {
 
 // convert word to pig latin word (assume word doesn't begin with a vowel or end in ay)
 
-        //String word1 = "cat";
-        //String pigLatinWord = word1
-        //    .trim()
-        //    .toLowerCase()
-        //    .substring(1)
-        //    .concat(word1.substring(0, 1).toLowerCase())
-        //    .concat("ay");
-        //System.out.println(pigLatinWord);
-
-
+//        String word1 = "cat";
+//        String pigLatinWord = word1
+//            .trim()
+//            .toLowerCase() // "cat"
+//            .substring(1) // "at"
+//            .concat(word1.substring(0, 1).toLowerCase()) // "atc"
+//            .concat("ay"); // "atcay"
+//        System.out.println(pigLatinWord);
 
     }
 }
