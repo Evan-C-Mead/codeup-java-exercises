@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.Random;
 
 public class MethodExercises {
 
@@ -17,6 +18,8 @@ public class MethodExercises {
         // Exercise #3
         factorial();
 
+        // Exercise #4
+        diceRoll();
     }
 
     public static double addition(double x, double y) {
@@ -66,6 +69,24 @@ public class MethodExercises {
                 sum *= i;
             }
             System.out.printf("The factorial of %d is: %d \n", userNumber, sum);
+            System.out.println("Do you want to continue? [y/n] ");
+            String option = sc.next();
+            if (!option.equalsIgnoreCase("y")) {
+                System.out.println("Project terminated");
+                break;
+            }
+        } while (true);
+    }
+
+    public static void diceRoll() {
+        System.out.println("Enter the total number of sides for a pair of dice:");
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        Random rand = new Random();
+        do {
+            System.out.println("The values on dice are: ");
+            for (int i = 0; i < 2; i++)
+                System.out.println(rand.nextInt(n/2) + 1);
             System.out.println("Do you want to continue? [y/n] ");
             String option = sc.next();
             if (!option.equalsIgnoreCase("y")) {
