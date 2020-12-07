@@ -13,21 +13,26 @@ public class HighLow {
         int guessCount = 0;
 
         System.out.println("Guess a number between 1 and 100...");
-        do {
-            Scanner sc = new Scanner(System.in);
-            int userGuess = sc.nextInt();
-            if (userGuess < randomNumber) {
-                System.out.println("HIGHER");
-                guessCount++;
-            } else if (userGuess > randomNumber) {
-                System.out.println("LOWER");
-                guessCount++;
-            } else if (userGuess == randomNumber) {
-                System.out.println("GOOD GUESS!");
-                System.out.printf("It took you %d guesses.", guessCount);
-                break;
-            }
-        } while (true);
+        Scanner sc = new Scanner(System.in);
+        if (!sc.hasNextInt()) {
+            System.out.println("Not a number!");
+            guess();
+        } else {
+            do {
+                int userGuess = sc.nextInt();
+                if (userGuess < randomNumber) {
+                    System.out.println("HIGHER");
+                    guessCount++;
+                } else if (userGuess > randomNumber) {
+                    System.out.println("LOWER");
+                    guessCount++;
+                } else if (userGuess == randomNumber) {
+                    System.out.println("GOOD GUESS!");
+                    System.out.printf("It took you %d guesses.", guessCount);
+                    break;
+                }
+            } while (true);
+        }
     }
 
 }
