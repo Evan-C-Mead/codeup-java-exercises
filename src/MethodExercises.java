@@ -6,17 +6,17 @@ public class MethodExercises {
     public static void main(String[] args) {
 
         // Exercise #1
-        System.out.println(addition(2, 3));
-        System.out.println(subtraction(8, 7));
-        System.out.println(multiplication(3, 9));
-        System.out.println(division(16, 4));
-        System.out.println(modulus(30, 4));
+//        System.out.println(addition(2, 3));
+//        System.out.println(subtraction(8, 7));
+//        System.out.println(multiplication(3, 9));
+//        System.out.println(division(16, 4));
+//        System.out.println(modulus(30, 4));
 
         // Exercise #2
-        getInteger(1, 10);
+//        getInteger(1, 10);
 
         // Exercise #3
-        factorial();
+//        factorial();
 
         // Exercise #4
         diceRoll();
@@ -72,7 +72,7 @@ public class MethodExercises {
             System.out.println("Do you want to continue? [y/n] ");
             String option = sc.next();
             if (!option.equalsIgnoreCase("y")) {
-                System.out.println("Project terminated");
+                System.out.println("Program terminated");
                 break;
             }
         } while (true);
@@ -90,7 +90,7 @@ public class MethodExercises {
             System.out.println("Do you want to continue? [y/n] ");
             String option = sc.next();
             if (!option.equalsIgnoreCase("y")) {
-                System.out.println("Project terminated");
+                System.out.println("Program terminated");
                 break;
             }
         } while (true);
