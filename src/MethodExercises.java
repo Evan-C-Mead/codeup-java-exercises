@@ -48,8 +48,14 @@ public class MethodExercises {
     }
 
     public static void getInteger(int min, int max) {
+        System.out.print("Enter a number between 1 and 10: \n");
+        Scanner sc = new Scanner(System.in);
+        if (!sc.hasNextInt()) {
+            System.out.println("Not a number!");
+            getInteger(min, max);
+            return;
+        }
         do {
-            Scanner sc = new Scanner(System.in);
             System.out.print("Enter a number between 1 and 10: \n");
             int userInput = sc.nextInt();
             if (userInput > min && userInput < max) {
