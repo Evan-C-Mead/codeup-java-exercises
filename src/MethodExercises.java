@@ -13,13 +13,13 @@ public class MethodExercises {
 //        System.out.println(modulus(30, 4));
 
         // Exercise #2
-//        getInteger(1, 10);
+        getInteger(1, 10);
 
         // Exercise #3
 //        factorial();
 
         // Exercise #4
-        diceRoll();
+//        diceRoll();
     }
 
     public static double addition(double x, double y) {
@@ -52,7 +52,7 @@ public class MethodExercises {
             Scanner sc = new Scanner(System.in);
             System.out.print("Enter a number between 1 and 10: \n");
             int userInput = sc.nextInt();
-            if (userInput > min & userInput < max) {
+            if (userInput > min && userInput < max) {
                 System.out.printf("Your number was: %d\n", userInput);
                 break;
             }
