@@ -49,7 +49,7 @@ Why use private visibility?
 -- THE FOUR PILLARS OF OOP --
   1. Abstraction - keep it clean
   2. Encapsulation - keep it contained
-  3. Inheritance - keep it hierarchical (DRY)
+  3. Inheritance - keep it hierarchical (DRY - Do not Repeat Yourself)
   4. Polymorphism - keep it versatile
   https://medium.com/@hamzzza.ahmed95/four-pillars-of-object-oriented-programming-oop-e8d7822aa219
   Today we will focus on Abstraction and Encapsulation.
