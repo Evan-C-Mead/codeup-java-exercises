@@ -35,10 +35,10 @@ public class OopLecture {
 
         // ======================== slide 4 (object fields)
 
-            oopLecture.Person rick = new oopLecture.Person();
-            rick.firstName = "Rick";
-            rick.lastName = "Sanchez";
-            System.out.println(rick.sayHello());
+//            oopLecture.Person rick = new oopLecture.Person();
+//            rick.firstName = "Rick";
+//            rick.lastName = "Sanchez";
+//            System.out.println(rick.sayHello());
 
 //         -- Dog Method Example --
 
@@ -60,8 +60,14 @@ public class OopLecture {
 
         // -- DogHelper Example --
 
-
-
+//        Dog dog1 = new Dog();
+//        dog1.name = "Bork";
+//        dog1.age = 4;
+//        dog1.callForDog("Bork");
+//        dog1.callForDog("Spike");
+//
+//        System.out.println(DogHelper.NUMBER_OF_DOG_BREEDS);
+//        System.out.println(DogHelper.humanToDogYears(dog1.age));
 
         // ======================== slide 7 (class vs. object fields)
 
@@ -99,12 +105,17 @@ public class OopLecture {
 
         // ======================== slide 10 (visibility)
 
-//            Student student = new Student("John Doe", 82.4);
-//            System.out.println(student.name) // "John Doe"
-//            // DON'T DO THIS - can't access private properties outside the class
+            Student student = new Student("John Doe", 82.4);
+            System.out.println(student.name); // "John Doe"
+            student.name = "This Guy";
+            System.out.println(student.name);
+            // DON'T DO THIS - can't access private properties outside the class
 //            System.out.println(student.grade);
-//            System.out.println(student.shareGrade()); // Do this instead
+            System.out.println(student.shareGrade()); // Do this instead
 
+            student.changeGrade(90);
+            System.out.println(student.name + " - ");
+            System.out.println(student.shareGrade());
 
     }
 
