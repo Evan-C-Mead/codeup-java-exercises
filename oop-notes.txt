@@ -1,0 +1,62 @@
+========== OOP PRE-LECTURE RESEARCH QUESTIONS ==========
+What is the difference between static and instance methods/variables?
+- Static methods as name states defined at the class level and could be accessed on the class name i.e no need of class object creation in order to access/call the static methods. While on another hand if we do not uses the static keyword with variable/method than it belongs or categorized as instance method which is defined at instance level and need class object for their accessibility. Also static methods exist as a single copy for a class while instance methods exist as multiple copies depending on the number of instances created for that particular class. Static methods can't access instance methods/variables directly while instance methods can access static variables and static methods directly.
+
+What is an instance and what is instantiation?
+- Instance is having variables/properties, but not necessarily giving them values. Instantiation is giving those variables/properties values. Think "dot" notation when creating those values.
+
+What is an object in Java?
+- An object is an instance of a class. Objects have properties and methods, and are instantiated, i.e. created, with the new keyword.
+
+What is a class in Java?
+- A class is used to define a custom type in Java. You can think of a class as a template, or a blueprint, for objects that will be created based on it.
+
+What is the difference between a class and an object?
+- A class is a blueprint from which you can create the instance (objects). An object is the instance of the class, which helps programmers to use variables and methods from inside the class. A class is used to bind data as well as methods together as a single unit. An object acts like a variable of the class.
+
+What is a constructor?
+- A constructor is a special method that is called when an object is created. A constructor has the same name as the class and does not define a return type. Constructors, like any other method, can accept arguments and be overloaded.
+
+What are some additional uses of the ‘final’ keyword?
+- If you make any variable as final, you cannot change the value of final variable (it will be constant).
+
+What are some uses of the ‘this’ keyword?
+- The "this" keyword provides us a way to refer to the current instance. You can think of "this" as saying "this object". You can only use the "this" keyword inside of an instance method, as it is an error to do so elsewhere.
+
+What are visibility modifiers?
+- Visibility refers to how a class or instance field is allowed to be accessed. It allows us to encapsulate the data in our classes; that is, only expose what is necessary to other classes and objects. They are; public, protected, private, and no modifier (package private).
+
+Why use private visibility?
+- Using private allows access or visibility, but not allowing the property to be re-assigned.
+
+========== OOP INTRO NOTES ==========
+-- UP TO NOW --
+ - using functions/methods to group together steps for the program to work
+
+-- DEFINITION --
+  OOP - Object-oriented programming
+  - A programming paradigm where state (data/properties) and behavior (functionality/methods)
+    are grouped together (often into objects)
+  - Objects in Java are created from classes (a blueprint for an object/instance)
+
+-- ADVANTAGES OF OOP --
+  Programming in an Object-oriented way can be used to develop code with a clearer and more modular organization in the following ways:
+  - implementation details can be abstracted away making code more readable (Abstraction)
+  - restriction of access to various levels of abstraction preventing data inconsistencies (Encapsulation)
+  - duplication is minimized through inheritance hierarchies (Inheritance)
+  - flexible code where multiple implementations may be swapped out behind a common interface (Polymorphism)
+
+-- THE FOUR PILLARS OF OOP --
+  1. Abstraction - keep it clean
+  2. Encapsulation - keep it contained
+  3. Inheritance - keep it hierarchical (DRY)
+  4. Polymorphism - keep it versatile
+  https://medium.com/@hamzzza.ahmed95/four-pillars-of-object-oriented-programming-oop-e8d7822aa219
+  Today we will focus on Abstraction and Encapsulation.
+
+-- CONCEPTS COVERED --
+  - how to create custom classes and objects from these classes
+  - defining and using instance and static fields
+  - how to control class constructors
+  - using the “this” keyword
+  - controlling encapsulation with visibility modifiers (edited)
