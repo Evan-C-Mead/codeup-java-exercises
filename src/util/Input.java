@@ -44,7 +44,7 @@ public class Input {
         double input;
         do {
             System.out.println("Enter a number with decimals between " + min + " and " + max +": ");
-            input = this.scanner.nextInt();
+            input = this.scanner.nextDouble();
         } while (input < min || input > max);
         return input;
     }
@@ -52,7 +52,7 @@ public class Input {
     public double getDouble() {
         double input;
         System.out.println("Enter a number with decimals: ");
-        input = this.scanner.nextInt();
+        input = this.scanner.nextDouble();
         return input;
     }
 
