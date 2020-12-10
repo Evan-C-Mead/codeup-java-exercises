@@ -17,11 +17,23 @@ public class Input {
         return input;
     }
 
+    public String getString(String prompt) {
+        System.out.println(prompt);
+        return getString();
+    }
+
     public boolean yesNo() {
-        String input;
-        System.out.println("Yes/No?");
-        input = this.scanner.next();
-        return input.toLowerCase().startsWith("y");
+        return yesNo("Yes/No?");
+//        String input = this.scanner.next();
+//        return (input.trim().toLowerCase().equals("y") ||
+//                input.trim().toLowerCase().equals("yes"));
+    }
+
+    public boolean yesNo(String prompt) {
+        System.out.println(prompt);
+        String input = this.scanner.next();
+        return (input.trim().toLowerCase().equals("y") ||
+                input.trim().toLowerCase().equals("yes"));
     }
 
     public int getInt(int min, int max) {
