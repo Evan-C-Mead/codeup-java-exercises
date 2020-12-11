@@ -10,8 +10,6 @@ public class ServerNameGenerator {
         System.out.printf("Your server name is: %s %s", randomizer(adjectives), randomizer(nouns));
     }
 
-
-
     public static String randomizer(String[] array) {
         Random random = new Random();
         int randomIndex = random.nextInt(array.length);
