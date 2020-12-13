@@ -10,5 +10,19 @@ public class Movie {
         this.category = category;
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
 
+    public String getName() {
+        return name;
+    }
+
+    public void setCategory() {
+        this.category = category;
+    }
+
+    public String getCategory() {
+        return category;
+    }
 }
