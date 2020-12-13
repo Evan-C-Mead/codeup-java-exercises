@@ -7,7 +7,7 @@ public class ServerNameGenerator {
         String[] adjectives = {"good", "full", "late", "dank", "strong", "important", "old", "special", "free", "clear"};
         String[] nouns = {"school", "person", "finger", "magazine", "yard", "night", "child", "arena", "bat", "program"};
 
-        System.out.printf("Your server name is: %s %s", randomizer(adjectives), randomizer(nouns));
+        System.out.printf("Your server name is: %s-%s", randomizer(adjectives), randomizer(nouns));
     }
 
     public static String randomizer(String[] array) {
