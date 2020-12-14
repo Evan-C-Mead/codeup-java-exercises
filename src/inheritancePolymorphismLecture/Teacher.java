@@ -1,4 +1,4 @@
-package inheritanceLecture;
+package inheritancePolymorphismLecture;
 
 public class Teacher extends Employee {
 

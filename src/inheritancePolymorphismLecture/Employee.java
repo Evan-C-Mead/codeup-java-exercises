@@ -1,4 +1,4 @@
-package inheritanceLecture;
+package inheritancePolymorphismLecture;
 
 import util.Input;
 
@@ -22,6 +22,10 @@ public class Employee {
 
     public void doWork() {
         System.out.println("Work..work...");
+    }
+
+    public String work() {
+        return "Filling out TPS reports";
     }
 
     public String getName() {
