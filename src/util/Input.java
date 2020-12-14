@@ -24,9 +24,6 @@ public class Input {
 
     public boolean yesNo() {
         return yesNo("Yes/No?");
-//        String input = this.scanner.next();
-//        return (input.trim().toLowerCase().equals("y") ||
-//                input.trim().toLowerCase().equals("yes"));
     }
 
     public boolean yesNo(String prompt) {
