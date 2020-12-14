@@ -10,7 +10,7 @@ public class Employee {
 
     public String name;
     public int id;
-    public static String company;
+    public final static String company = "Codeup";
 
     public Employee() {
 
