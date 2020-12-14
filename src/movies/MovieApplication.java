@@ -29,6 +29,7 @@ public class MovieApplication {
                 case (0):
                     System.out.println("Are you sure you want to quit?");
                     boolean userConfirm = userInput.yesNo();
+                    System.out.println();
                     if (userConfirm) {
                         pickOption = false;
                         System.out.println("Program terminated...");
