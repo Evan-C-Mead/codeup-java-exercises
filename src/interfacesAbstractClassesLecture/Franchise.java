@@ -1,7 +1,6 @@
 package interfacesAbstractClassesLecture;
 
 public abstract class Franchise {
-
     // All the methods in an abstract class are like a list of rules or requirements for what needs to be implemented in a class that extends this abstract class
 
     // If we were to create a class that extends a Franchise

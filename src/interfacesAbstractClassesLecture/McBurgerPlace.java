@@ -3,19 +3,28 @@ package interfacesAbstractClassesLecture;
 import java.util.ArrayList;
 import java.util.List;
 
-// this is a specific "location" of the Franchise
-public class BurgerPlace extends Franchise{
-    // this is the ACTUAL McBurger restaurant
-    // it must follow all the rules set in the Franchise.java class
+public class McBurgerPlace implements McFranchise {
 
     public static void main(String[] args) {
         List<String> theseMenuItems = new ArrayList<>();
         theseMenuItems.add("Burger");
         theseMenuItems.add("Fries");
+        theseMenuItems.add("Shake");
         List<String> theseCategories = new ArrayList<>();
         theseCategories.add("Lunch");
         theseCategories.add("Sides");
-        BurgerPlace theBurgerJoint = new BurgerPlace("Manager Dude", theseMenuItems, theseCategories, 80, 800, 2200, true);
+        McBurgerPlace newBurgerJoint = new McBurgerPlace(theseMenuItems, theseCategories, 60, 800, 2200, true);
+
+        System.out.println("Welcome to " + companyName + "!");
+        System.out.println("We have " + newBurgerJoint.seatingCapacity + " seats.");
+        newBurgerJoint.businessHours(newBurgerJoint.openTime, newBurgerJoint.closeTime);
+
+        // loop through all menu items and print them
+        for (String thisItem : newBurgerJoint.getMenuItems()) {
+            newBurgerJoint.makeStuff(thisItem);
+//            System.out.println("Menu item: " + thisItem);
+        }
+
     }
 
     // properties - can have as many custom properties as it wants
@@ -27,8 +36,7 @@ public class BurgerPlace extends Franchise{
     private boolean iceCreamTime;
 
     // constructor
-    public BurgerPlace(String managerName, List<String> menuItems, List<String> menuCategories, int seatingCapacity, int openTime, int closeTime, boolean iceCreamTime) {
-        super(managerName);
+    public McBurgerPlace(List<String> menuItems, List<String> menuCategories, int seatingCapacity, int openTime, int closeTime, boolean iceCreamTime) {
         this.menuItems = menuItems;
         this.menuCategories = menuCategories;
         this.seatingCapacity = seatingCapacity;
@@ -37,10 +45,10 @@ public class BurgerPlace extends Franchise{
         this.iceCreamTime = iceCreamTime;
     }
 
-    // override the methods that have been written, per the "Franchise" abstract class
+    // overrides
     @Override
     public void makeStuff(String menuItem) {
-        System.out.println("The kitchen just prepared a tasty " + menuItem);
+        System.out.println("The kitchen just prepared an order of: " + menuItem);
     }
 
     @Override
@@ -49,11 +57,12 @@ public class BurgerPlace extends Franchise{
     }
 
     @Override
-    public boolean icCreamMachineWorking() {
-        if (this.openTime > 100) {
-            return this.iceCreamTime;
+    public String iceCreamMachineWorking() {
+        if (this.iceCreamTime) {
+            return "Time for ice cream!";
+        } else {
+            return "No ice cream today...";
         }
-        return false;
     }
 
     // getters and setters
