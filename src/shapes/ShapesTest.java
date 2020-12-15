@@ -8,7 +8,7 @@ public class ShapesTest {
         System.out.printf("Area of your square is: %.1f\n", myShape.getArea());
         System.out.printf("Perimeter of your square is: %.1f\n", myShape.getPerimeter());
 
-        Measurable myShape2 = new Rectangle(3,7);
+        Measurable myShape2 = new Rectangle(3,8);
         System.out.printf("Area of your rectangle is: %.1f\n", myShape2.getArea());
         System.out.printf("Perimeter of your rectangle is: %.1f\n", myShape2.getPerimeter());
 
