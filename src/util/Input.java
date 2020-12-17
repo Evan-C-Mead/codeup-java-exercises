@@ -11,10 +11,7 @@ public class Input {
     }
 
     public String getString() {
-        String input;
-        System.out.println("Enter a word: ");
-        input = this.scanner.next();
-        return input;
+        return scanner.nextLine();
     }
 
     public String getString(String prompt) {
@@ -23,14 +20,15 @@ public class Input {
     }
 
     public boolean yesNo() {
-        return yesNo("Yes/No?");
+        System.out.println("[Yes / No]");
+        String input = scanner.nextLine();
+        return (input.trim().toLowerCase().equals("y") || input.trim().toLowerCase().equals("yes"));
     }
 
-    public boolean yesNo(String prompt) {
-        System.out.println(prompt);
-        String input = this.scanner.next();
-        return (input.trim().toLowerCase().equals("y") ||
-                input.trim().toLowerCase().equals("yes"));
+    public boolean yesNoNewLine() {
+        System.out.println("[Yes / No]\n");
+        String input = scanner.nextLine();
+        return (input.trim().toLowerCase().equals("y") || input.trim().toLowerCase().equals("yes"));
     }
 
     public int getInt(int min, int max) {

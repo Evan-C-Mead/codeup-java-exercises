@@ -1,9 +1,11 @@
 package grades;
 
 import java.util.HashMap;
-import java.util.Scanner;
+import util.Input;
 
 public class GradesApplication {
+
+    static Input input = new Input();
 
     public static void main(String[] args) {
         HashMap<String, Student> students = new HashMap<>();
@@ -33,14 +35,27 @@ public class GradesApplication {
         students.put("frankThe-tank-90", Student3);
         students.put("rodrigoIsADude02", Student4);
 
-        System.out.println("Welcome!\n");
-        System.out.println("Here are the GitHub usernames of our students:\n");
-//        System.out.println(students.keySet() + "\n");
-
-        for (String key : students.keySet()) {
-            System.out.print( "| " + key + " |");
-        }
-
+        commandListInterface(students);
     }
 
+    public static void commandListInterface(HashMap<String, Student> students) {
+        System.out.println("Welcome!\n");
+        System.out.println("Here are the GitHub usernames of our students:\n");
+        do {
+            for (String key : students.keySet()) {
+                System.out.print("| " + key + " |");
+            }
+            System.out.println("\n\nWhat username would you like to see more information on?\n");
+            String usernameKey = input.getString();
+            if (students.containsKey(usernameKey)) {
+                Student selectedStudent = students.get(usernameKey);
+                System.out.printf("\nName: %s - GitHub Username: %s\n", selectedStudent.getName(), usernameKey);
+                System.out.printf("Current GPA: %.2f\n", selectedStudent.getGradeAverage());
+            } else {
+                System.out.println("\nSorry, no student found with the GitHub username of " + usernameKey);
+            }
+            System.out.println("\nWould you like to see another student?\n");
+        } while (input.yesNoNewLine());
+        System.out.println("\nGoodbye, and have a wonderful day!");
+    }
 }
