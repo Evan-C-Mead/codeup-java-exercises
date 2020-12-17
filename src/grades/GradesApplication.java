@@ -1,6 +1,7 @@
 package grades;
 
 import java.util.HashMap;
+import java.util.Scanner;
 
 public class GradesApplication {
 
@@ -32,7 +33,14 @@ public class GradesApplication {
         students.put("frankThe-tank-90", Student3);
         students.put("rodrigoIsADude02", Student4);
 
-        System.out.println(students.keySet());
+        System.out.println("Welcome!\n");
+        System.out.println("Here are the GitHub usernames of our students:\n");
+//        System.out.println(students.keySet() + "\n");
+
+        for (String key : students.keySet()) {
+            System.out.print( "| " + key + " |");
+        }
+
     }
 
 }
