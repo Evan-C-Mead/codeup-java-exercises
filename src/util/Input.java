@@ -11,7 +11,7 @@ public class Input {
     }
 
     public String getString() {
-        return scanner.nextLine();
+        return this.scanner.nextLine();
     }
 
     public String getString(String prompt) {

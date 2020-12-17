@@ -54,10 +54,10 @@ public class GroceryListApplication {
 
 }
 
-// 1) Given an orderes list of groceries to choose from, select the category
-//                        display prewritten lidt of categories
-//                            What category?
-//                                save user input for category, item, and quantity to insert to HashMap
+//                1) Given an orders list of groceries to choose from, select the category
+//                      display pre-written list of categories
+//                          What category?
+//                              save user input for category, item, and quantity to insert to HashMap
 
 //                2) Enter the name of the item
 //                      what is the item?

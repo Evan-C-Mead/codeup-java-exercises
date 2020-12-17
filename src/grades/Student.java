@@ -45,11 +45,11 @@ public class Student {
 
     // returns the average of the students grades
     public double getGradeAverage() {
-        double average = 0;
+        int average = 0;
         for (int grade : grades) {
             average += grade;
         }
-        return average / grades.size();
+        return (double) average / grades.size();
     }
 
     public ArrayList<Integer> getGrades() {

@@ -1,6 +1,7 @@
 package grades;
 
 import java.util.HashMap;
+import java.util.Map;
 import util.Input;
 
 public class GradesApplication {
@@ -8,7 +9,7 @@ public class GradesApplication {
     static Input input = new Input();
 
     public static void main(String[] args) {
-        HashMap<String, Student> students = new HashMap<>();
+        Map<String, Student> students = new HashMap<>();
 
         Student Student1 = new Student("Jake", 100);
         students.put("jakeTheSnake75", Student1);
@@ -37,10 +38,10 @@ public class GradesApplication {
         commandListInterface(students);
     }
 
-    public static void commandListInterface(HashMap<String, Student> students) {
+    public static void commandListInterface(Map<String, Student> students) {
         System.out.println("Welcome!\n");
-        System.out.println("Here are the GitHub usernames of our students:\n");
         do {
+            System.out.println("Here are the GitHub usernames of our students:\n");
             for (String key : students.keySet()) {
                 System.out.print("| " + key + " |");
             }
