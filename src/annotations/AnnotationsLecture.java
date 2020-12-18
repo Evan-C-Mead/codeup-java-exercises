@@ -18,10 +18,11 @@ public class AnnotationsLecture {
 
 
 
-
         //TODO TOGETHER:Call sayHello without @Override
         //TODO TOGETHER: Comment out annotation and change Parent sayHello no sayHelloParent (Notice there is no error!)
 //        child1.deprecatedMethod();
+
+//        child1.imAMethod();
 
 
 //        doRiskyThings();
@@ -29,6 +30,7 @@ public class AnnotationsLecture {
     }
 
     //TODO Together: explore analyze > inspect code
+    // right click mouse -> analyze -> inspect code
 
 
 

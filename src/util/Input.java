@@ -32,35 +32,45 @@ public class Input {
     }
 
     public int getInt(int min, int max) {
-        int input;
-        do {
+        try {
+            do {
+                System.out.println("Enter a number between " + min + " and " + max +": ");
+            } while (Integer.valueOf(getString()) < min || Integer.parseInt(getString()) > max);
+            return Integer.parseInt(getString());
+        } catch (NumberFormatException e) {
             System.out.println("Enter a number between " + min + " and " + max +": ");
-            input = this.scanner.nextInt();
-        } while (input < min || input > max);
-        return input;
+            return getInt();
+        }
     }
 
     public int getInt() {
-        int input;
         System.out.println("Enter a number: ");
-        input = this.scanner.nextInt();
-        return input;
+        try {
+            return Integer.parseInt(getString());
+        } catch (NumberFormatException e) {
+            System.out.println("Please enter a number!");
+            return getInt();
+        }
     }
 
     public double getDouble(double min, double max) {
-        double input;
-        do {
+        System.out.println("Enter a number with decimals between " + min + " and " + max +": ");
+        try {
+            return Double.parseDouble(getString());
+        } catch (NumberFormatException e) {
             System.out.println("Enter a number with decimals between " + min + " and " + max +": ");
-            input = this.scanner.nextDouble();
-        } while (input < min || input > max);
-        return input;
+            return getDouble();
+        }
     }
 
     public double getDouble() {
-        double input;
         System.out.println("Enter a number with decimals: ");
-        input = this.scanner.nextDouble();
-        return input;
+        try {
+            return Double.parseDouble(getString());
+        } catch (NumberFormatException e) {
+            System.out.println("Please enter a number with decimals!");
+            return getDouble();
+        }
     }
 
 }

@@ -15,7 +15,6 @@ public class CircleApp {
             System.out.printf("Circumference of the circle is: %f\n", circle.getCircumference());
 
             System.out.println("Want to make another circle?");
-            userInput.yesNo();
         } while (userInput.yesNo());
 
         System.out.println("You checked " + Circle.getCircleCount() + " circles.");
