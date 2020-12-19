@@ -32,45 +32,35 @@ public class Input {
     }
 
     public int getInt(int min, int max) {
-        try {
-            do {
-                System.out.println("Enter a number between " + min + " and " + max +": ");
-            } while (Integer.valueOf(getString()) < min || Integer.parseInt(getString()) > max);
-            return Integer.parseInt(getString());
-        } catch (NumberFormatException e) {
+        int input;
+        do {
             System.out.println("Enter a number between " + min + " and " + max +": ");
-            return getInt();
-        }
+            input = this.scanner.nextInt();
+        } while (input <= min || input >= max);
+        return input;
     }
 
     public int getInt() {
+        int input;
         System.out.println("Enter a number: ");
-        try {
-            return Integer.parseInt(getString());
-        } catch (NumberFormatException e) {
-            System.out.println("Please enter a number!");
-            return getInt();
-        }
+        input = this.scanner.nextInt();
+        return input;
     }
 
     public double getDouble(double min, double max) {
-        System.out.println("Enter a number with decimals between " + min + " and " + max +": ");
-        try {
-            return Double.parseDouble(getString());
-        } catch (NumberFormatException e) {
+        double input;
+        do {
             System.out.println("Enter a number with decimals between " + min + " and " + max +": ");
-            return getDouble();
-        }
+            input = this.scanner.nextDouble();
+        } while (input <= min || input >= max);
+        return input;
     }
 
     public double getDouble() {
+        double input;
         System.out.println("Enter a number with decimals: ");
-        try {
-            return Double.parseDouble(getString());
-        } catch (NumberFormatException e) {
-            System.out.println("Please enter a number with decimals!");
-            return getDouble();
-        }
+        input = this.scanner.nextDouble();
+        return input;
     }
 
 }
