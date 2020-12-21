@@ -36,7 +36,7 @@ public class Input {
         do {
             System.out.println("Enter a number between " + min + " and " + max +": ");
             input = this.scanner.nextInt();
-        } while (input <= min || input >= max);
+        } while (input < min || input > max);
         return input;
     }
 
@@ -52,7 +52,7 @@ public class Input {
         do {
             System.out.println("Enter a number with decimals between " + min + " and " + max +": ");
             input = this.scanner.nextDouble();
-        } while (input <= min || input >= max);
+        } while (input < min || input > max);
         return input;
     }
 
